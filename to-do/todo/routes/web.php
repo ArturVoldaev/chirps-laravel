@@ -1,6 +1,11 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyOwnController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +21,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+Route::resource('/list', MyOwnController::class);
+
+
+
+// Route::post('/list-of-tasks/', function ($request) {
+//     return 'Hello World!!!!';
+// });
