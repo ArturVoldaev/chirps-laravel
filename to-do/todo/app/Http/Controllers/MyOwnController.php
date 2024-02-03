@@ -35,7 +35,7 @@ class MyOwnController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {   
+    {
         $post = new Post;
         $post->title = $request->title;
         $post->save();
@@ -55,7 +55,13 @@ class MyOwnController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $post = Post::where('id', $id)->get();
+        $post = $post->first()->getOriginal();
+        dump($id);
+        dump($post);
+        var_dump($post);
+
+        return view('list.edit',  ['data' => $post]);
     }
 
     /**
@@ -63,7 +69,12 @@ class MyOwnController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        Post::where('id', $id)->update([
+            'title' => $request['title'],
+        ]);
+
+       return  redirect('/list');
     }
 
     /**
@@ -71,6 +82,8 @@ class MyOwnController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('/list');
     }
 }
