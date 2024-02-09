@@ -14,7 +14,10 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="antialiased">
-        <h1>coom say hello</h1>
-        @livewire('table-clients')
+        @livewire('client-form', ['client'=>$client])
+
+
+        {{$client}}
+
     </body>
 </html>

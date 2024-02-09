@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/new-client-form', function () {
-    return view('new-client-form');
+Route::post('/', function () {
+    return view('welcome');
 });
+
+Route::post('client-page/{id}', function ($id) {
+    $data = Client::find($id);
+    return view('client-page', ['client' => $data]);
+});
+
+Route::get('client-page', function () {
+    return view('client-page' , ['client' => '']);
+});
+
+
+// Route::post('/new-client-form/{id}', function ($id) {
+//     return view('new-client-form-page');
+// });
