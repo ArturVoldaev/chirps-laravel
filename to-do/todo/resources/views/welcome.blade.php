@@ -14,6 +14,13 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="antialiased">
+        @php
+                        
+        if(DB::connection()->getPdo()) {
+            echo "OK";
+        }
+     
+            @endphp
         <h1>coom say hello</h1>
         @livewire('table-clients')
     </body>
