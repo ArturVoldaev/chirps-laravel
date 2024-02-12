@@ -9,13 +9,13 @@
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <input  type="text"
+            {{-- <input  type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 "
-                placeholder="Search" required="">
+                placeholder="Search" required=""> --}}
         </div>
     </div>
     <div class="flex space-x-3">
-        <div class="flex space-x-3 items-center">
+        {{-- <div class="flex space-x-3 items-center">
             <label class="w-40 text-sm font-medium text-gray-900">User Type :</label>
             <select 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
@@ -23,6 +23,6 @@
                 <option value="0">User</option>
                 <option value="1">Admin</option>
             </select>
-        </div>
+        </div> --}}
     </div>
 </div>

@@ -7,7 +7,7 @@
                 @include('livewire.includes.headingAndRows')
 
 
-                <div class="py-4 px-3">
+                {{-- <div class="py-4 px-3">
                     <div class="flex ">
                         <div class="flex space-x-4 items-center mb-3">
                             <label class="w-32 text-sm font-medium text-gray-900">Per Page</label>
@@ -21,7 +21,7 @@
                             </select>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

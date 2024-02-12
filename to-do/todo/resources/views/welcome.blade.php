@@ -17,11 +17,11 @@
         @php
                         
         if(DB::connection()->getPdo()) {
-            echo "OK";
+            echo "DB is OK";
         }
      
             @endphp
-        <h1>coom say hello</h1>
+       
         @livewire('table-clients')
     </body>
 </html>
